@@ -5,6 +5,7 @@ module Sqskiq
   module Worker
     module ClassMethods
       def connection
+        puts 'Test'
         @sqs ||= ::AWS::SQS.new(Sqskiq.configuration)
       end
 
