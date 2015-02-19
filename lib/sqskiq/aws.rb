@@ -10,6 +10,7 @@ module Sqskiq
     end
 
     def fetch_sqs_messages
+      puts 'test1'
       @queue.receive_message(:limit => 10, :attributes => [:receive_count])
     end
 
