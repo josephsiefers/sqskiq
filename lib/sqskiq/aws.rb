@@ -4,6 +4,7 @@ module Sqskiq
   module AWS
 
     def init_queue(queue_name, configuration = {})
+      puts 'test'
       sqs = ::AWS::SQS.new(configuration)
       @queue = sqs.queues.named(queue_name.to_s)
     end
